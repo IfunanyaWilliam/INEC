@@ -14,6 +14,14 @@ namespace Models
         public int Votes { get; set; }
 
         public IList<Candidate> Candidates { get; set; }
+
+        public Party()
+        {
+        }
+
+        public Party(string id) : base(id)
+        {
+        }
     }
 }
 

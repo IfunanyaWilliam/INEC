@@ -7,7 +7,7 @@ using Models.Enums;
   
 namespace Models
 {
-    public class Election
+    public class Election : BaseEntity 
     {
         public ElectionType Type { get; set; }
 
@@ -22,6 +22,14 @@ namespace Models
         public Candidate SecondRunnerUP { get; set; }
 
         public IList<Candidate> Contenders { get; set; }
+
+        public Election()
+        {
+        }
+
+        public Election(string id) : base(id)
+        {
+        }
     }
 }
 

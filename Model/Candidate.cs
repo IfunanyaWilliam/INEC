@@ -15,6 +15,13 @@ namespace Models
 
         public Election ElectionContested { get; set; }
 
+        public Candidate()
+        {
+        } 
+
+        public Candidate(string id) : base(id)
+        {
+        }
       
     }
 }
