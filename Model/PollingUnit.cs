@@ -1,5 +1,6 @@
 ﻿using System;
 using System.Collections.Generic;
+using System.ComponentModel.DataAnnotations;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
@@ -9,10 +10,10 @@ namespace Models
     public class PollingUnit: BaseEntity
     {
         public string Unit_No { get; }
-
+        [RegularExpression(@"^[A-Z]{3}$")]
         public string LocalGovernment { get; }
 
-        public string PollingUnitCode { get; set; }
+        public string PollingUnitCode { get; }
 
         public IList<Voter> Voters { get; set; }
 
@@ -20,6 +21,7 @@ namespace Models
         {
             LocalGovernment = LGA;
             Unit_No = $"{LGA}-{Guid.NewGuid().ToString().Replace("-", "").Substring(0, 6)}";
+            PollingUnitCode = Unit_No.Substring(0, 7);
            
         }
 
@@ -27,6 +29,7 @@ namespace Models
         {
             LocalGovernment= LGA;   
             Unit_No= unitNo;
+            PollingUnitCode = Unit_No.Substring(0, 7);
         }
 
     }

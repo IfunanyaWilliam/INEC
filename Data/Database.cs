@@ -10,15 +10,16 @@ namespace Data
 {
     public class Database 
     {
-        public static IList<Voter> VoterTable { get; set; }
-        public static IList<Candidate> CandidateTable { get; set; } = new List<Candidate>();
+        public  IList<Voter> VoterTable { get; set; } = new List<Voter>();    
+        public  IList<Candidate> CandidateTable { get; set; } = new List<Candidate>();
 
-        public static IList<Election> ElectionTable { get; set; } = new List<Election>();
+        public  IList<Election> ElectionTable { get; set; } = new List<Election>();
 
-        public static IList<Party> PartyTable { get; set; }= new List<Party>();
+        public  IList<Party> PartyTable { get; set; }= new List<Party>();
 
-        public static IList<PollingUnit> PollingUnitTable { get; set;} = new List<PollingUnit>();
+        public  IList<PollingUnit> PollingUnitTable { get; set;} = new List<PollingUnit>();
 
 
     }
+
 }

@@ -11,7 +11,6 @@ namespace Models
     {
         public ElectionType Type { get; set; }
 
-
         //Could be ward, local government, state
         public string Location { get; set; }
 

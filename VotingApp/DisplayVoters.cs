@@ -8,11 +8,11 @@ using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
 
-namespace VotingUI
+namespace VotingApp
 {
-    public partial class Form1 : Form
+    public partial class DisplayVoters : Form
     {
-        public Form1()
+        public DisplayVoters()
         {
             InitializeComponent();
         }
